@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-// import { Label } from 'office-ui-fabric-react/lib/Label';
-// import { Icon } from 'office-ui-fabric-react/lib/Icon';
 import { Persona, PersonaSize, PersonaPresence } from 'office-ui-fabric-react/lib/Persona';
 import { PivotItem, Pivot, PivotLinkSize, PivotLinkFormat } from 'office-ui-fabric-react/lib/Pivot';
+import Skills from './Skills'
+import Experience from './Experience'
+import Info from './Info'
 import './App.scss'
 
 const tabKeys = {
@@ -27,18 +28,11 @@ class App extends Component {
   getTabContent = (tabKey) => {
     switch (tabKey) {
       case tabKeys.skills:
-        return (<>
-          <p>
-            .NET Full-Stack Developer with 3.5 years of experience, open to othertechnologies such as NodeJs.
-            Passion for automation, manual effort reduction, DevOps methodologies and tools.
-            Experience in ChatOps and using Artificial Inteligence services.
-            Can work in small and large teams distributedin different locations and timezones.
-          </p>
-        </>)
+        return <Skills />
       case tabKeys.experience:
-        return <p>This is my experience lorem ipsum.</p>
+        return <Experience />
       case tabKeys.info:
-        return <p>This is my personal information lorem ipsum.</p>
+        return <Info />
       default: return ''
     }
   }
@@ -62,18 +56,15 @@ class App extends Component {
                     presence={PersonaPresence.online}
                   />
                 </div>
-                <Pivot linkSize={PivotLinkSize.large} linkFormat={PivotLinkFormat.links} className="tabs" onLinkClick={this.handleLinkClick}>
+                <Pivot linkSize={PivotLinkSize.normal} linkFormat={PivotLinkFormat.links} className="tabs" onLinkClick={this.handleLinkClick} headersOnly>
                   <PivotItem headerText="Skills" itemKey={tabKeys.skills} />
-                  {/* <PivotItem headerText="Summary" itemKey={tabKeys.summary} /> */}
                   <PivotItem headerText="Experience" itemKey={tabKeys.experience} />
                   <PivotItem headerText="Personal Info" itemKey={tabKeys.info} />
                 </Pivot>
               </div>
             </div>
-            <div className="">
-              <div className="tab-content">
-                {this.getTabContent(this.state.activeTab)}
-              </div>
+            <div className="tab-content">
+              {this.getTabContent(this.state.activeTab)}
             </div>
           </main>
         </div>

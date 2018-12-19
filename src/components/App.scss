@@ -17,6 +17,7 @@ html {
   -webkit-filter: blur(2px);
   height: 100%;
   width: 100%;
+  position: fixed;
 }
 
 #root {
@@ -28,8 +29,10 @@ html {
 
 .App {
   position: absolute;
+  top: 2em;
   max-width: 800px;
   margin: auto;
+  margin-bottom: 2em;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
   
@@ -62,14 +65,14 @@ html {
 
   .tab-content{
     font-size: 1em;
-    padding: 1em;
+    padding: 1.5em;
   }
 
   .profile {
     padding: 20px 0px;
 
-    .ms-Persona-primaryText, .ms-Persona-primaryText:hover {
-      color: #fff;
+    .ms-Persona > .ms-Persona-details > .ms-Persona-primaryText, .ms-Persona-primaryText:hover {
+      color: #ffffff;
     }
 
     .ms-Persona-secondaryText{
