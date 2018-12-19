@@ -1,7 +1,13 @@
+html{
+  background: #333;
+}
 .App {
-
+  max-width: 800px;
+  margin: 20px auto;
+  background: #fff;
   .tabs {
-    max-width: 1000px;
+    // max-width: 1000px;
+    // text-align: center;
     .ms-Pivot-text, .ms-Pivot-icon, .ms-Pivot-count {
       color: #fff;
     }
@@ -15,29 +21,45 @@
 
   .App-header {
     background-color: #008272;
-    min-height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding-bottom: 0px;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
     color: white;
 
+    .name {
+      margin-bottom: 0px;
+    }
     .title {
-      font-size: calc(10px + 2vmin);
+      display: block;
+      margin-bottom: 20px;
+      color: rgba(255,255,255, 0.7);
     }
   }
 
-  .App-link {
-    color: #61dafb;
+  .tab-content{
+    font-size: 1em;
   }
 
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
+  .profile {
+    padding: 20px 0px;
+
+    .ms-Persona-primaryText{
+      color: #fff;
     }
-    to {
-      transform: rotate(360deg); 
+    .ms-Persona-secondaryText{
+      color: rgba(255, 255, 255, 0.7);
     }
   }
+
+  .container {
+    // max-width: 740px;
+    width: 100%;
+    margin: auto;
+    padding: 0px 20px;
+  }
+
+  
 }
 
