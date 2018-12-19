@@ -1,18 +1,43 @@
-html{
-  background: #333;
+
+html,body, #root {
+  height: 100vh;
 }
+
+html {
+  height: 100vh;
+  background: #eaeaea;
+}
+
+.bg-image {
+  background: url('/vs-code.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .App {
+  position: absolute;
   max-width: 800px;
-  margin: 20px auto;
+  margin: auto;
   background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
+  
   .tabs {
-    // max-width: 1000px;
-    // text-align: center;
     .ms-Pivot-text, .ms-Pivot-icon, .ms-Pivot-count {
       color: #fff;
     }
   }
-
   
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -22,15 +47,12 @@ html{
   .App-header {
     background-color: #008272;
     padding-bottom: 0px;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
     color: white;
 
     .name {
       margin-bottom: 0px;
     }
+
     .title {
       display: block;
       margin-bottom: 20px;
@@ -40,26 +62,28 @@ html{
 
   .tab-content{
     font-size: 1em;
+    padding: 1em;
   }
 
   .profile {
     padding: 20px 0px;
 
-    .ms-Persona-primaryText{
+    .ms-Persona-primaryText, .ms-Persona-primaryText:hover {
       color: #fff;
     }
+
     .ms-Persona-secondaryText{
       color: rgba(255, 255, 255, 0.7);
     }
   }
 
   .container {
-    // max-width: 740px;
     width: 100%;
     margin: auto;
     padding: 0px 20px;
   }
 
-  
+  p:first-child {
+    margin-top: 0px;
+  }
 }
-

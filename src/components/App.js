@@ -29,19 +29,16 @@ class App extends Component {
       case tabKeys.skills:
         return (<>
           <p>
-            .NET Full-Stack Developer with 3.5 years of experience, open to othertechnologies such as NodeJs.</p>
-          <p>
+            .NET Full-Stack Developer with 3.5 years of experience, open to othertechnologies such as NodeJs.
             Passion for automation, manual effort reduction, DevOps methodologies and tools.
-          </p>
-          <p>
             Experience in ChatOps and using Artificial Inteligence services.
-          </p>
-          <p>
             Can work in small and large teams distributedin different locations and timezones.
           </p>
         </>)
       case tabKeys.experience:
         return <p>This is my experience lorem ipsum.</p>
+      case tabKeys.info:
+        return <p>This is my personal information lorem ipsum.</p>
       default: return ''
     }
   }
@@ -52,35 +49,35 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <main>
-          <div className="App-header">
-            <div className="container">
-              <div className="profile">
-                <Persona
-                  {...cardDetails}
-                  size={PersonaSize.size72}
-                  presence={PersonaPresence.online}
-                />
+      <>
+        <div className="bg-image"></div>
+        <div className="App">
+          <main>
+            <div className="App-header">
+              <div className="container">
+                <div className="profile">
+                  <Persona
+                    {...cardDetails}
+                    size={PersonaSize.size72}
+                    presence={PersonaPresence.online}
+                  />
+                </div>
+                <Pivot linkSize={PivotLinkSize.large} linkFormat={PivotLinkFormat.links} className="tabs" onLinkClick={this.handleLinkClick}>
+                  <PivotItem headerText="Skills" itemKey={tabKeys.skills} />
+                  {/* <PivotItem headerText="Summary" itemKey={tabKeys.summary} /> */}
+                  <PivotItem headerText="Experience" itemKey={tabKeys.experience} />
+                  <PivotItem headerText="Personal Info" itemKey={tabKeys.info} />
+                </Pivot>
               </div>
-
-              {/* <h1 className="ms-font-su name">Paul Sanchez</h1>
-              <small className="title">.NET Full-Stack Developer</small> */}
-              <Pivot linkSize={PivotLinkSize.large} linkFormat={PivotLinkFormat.links} className="tabs" onLinkClick={this.handleLinkClick}>
-                <PivotItem headerText="Skills" itemKey={tabKeys.skills} />
-                {/* <PivotItem headerText="Summary" itemKey={tabKeys.summary} /> */}
-                <PivotItem headerText="Experience" itemKey={tabKeys.experience} />
-                <PivotItem headerText="Personal Info" itemKey={tabKeys.info} />
-              </Pivot>
             </div>
-          </div>
-          <div className="container">
-            <div className="tab-content">
-              {this.getTabContent(this.state.activeTab)}
+            <div className="">
+              <div className="tab-content">
+                {this.getTabContent(this.state.activeTab)}
+              </div>
             </div>
-          </div>
-        </main>
-      </div>
+          </main>
+        </div>
+      </>
     );
   }
 }
