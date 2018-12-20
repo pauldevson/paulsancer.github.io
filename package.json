@@ -12,7 +12,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "standard \"src /**/*.js\" --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -34,8 +35,6 @@
       "javascriptreact"
     ],
     "globals": [
-      "$",
-      "jQuery",
       "fetch"
     ],
     "ignore": [

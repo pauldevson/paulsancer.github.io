@@ -1,3 +1,4 @@
+$muted: rgba(0, 0, 0, 0.6);
 
 html,body, #root {
   height: 100vh;
@@ -86,12 +87,34 @@ html {
   }
 
   .experience .position {
+    margin-bottom: 1em;
+    &:not(:last-child) {
+      border-bottom: 1px solid rgb(234, 234, 234);
+    }
+
     .title {
       margin: 0;
     }
-    // .company {
-      
-    // }
+
+    .description {
+      font-weight: 100;
+
+      &:not(& + .description){
+        padding-top: 1em;
+      }
+    }
+
+    .period{
+      // float: right;
+      // line-height: 2em;
+      font-size: 0.8em;
+      color: $muted;
+    }
+
+    .company {
+      font-style: normal;
+      color: rgba(0, 0, 0, 0.7);
+    }
   }
 
   .container {

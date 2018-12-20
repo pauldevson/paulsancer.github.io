@@ -49,7 +49,6 @@ const Skills = () => <>
     Experience in ChatOps and using Artificial Inteligence services.
     Can work in small and large teams distributedin different locations and timezones.
   </p>
-
 </>
 
 export default Skills
