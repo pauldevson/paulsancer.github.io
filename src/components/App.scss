@@ -35,6 +35,7 @@ html {
   margin-bottom: 2em;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px;
+  transition: all 1s;
   
   .tabs {
     .ms-Pivot-text, .ms-Pivot-icon, .ms-Pivot-count {
@@ -66,6 +67,10 @@ html {
   .tab-content{
     font-size: 1em;
     padding: 1.5em;
+
+    *:first-child {
+      margin-top: 0px;
+    }
   }
 
   .profile {
@@ -80,13 +85,18 @@ html {
     }
   }
 
+  .experience .position {
+    .title {
+      margin: 0;
+    }
+    // .company {
+      
+    // }
+  }
+
   .container {
     width: 100%;
     margin: auto;
     padding: 0px 20px;
-  }
-
-  p:first-child {
-    margin-top: 0px;
   }
 }
