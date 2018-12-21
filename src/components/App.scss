@@ -54,6 +54,23 @@ html {
     padding-bottom: 0px;
     color: white;
 
+    &.stick {
+      position: sticky;
+      top: 0;
+    }
+
+    .profile {
+      padding: 20px 0px;
+
+      .ms-Persona > .ms-Persona-details > .ms-Persona-primaryText, .ms-Persona-primaryText:hover {
+        color: #ffffff;
+      }
+
+      .ms-Persona-secondaryText, .ms-Persona-tertiaryText {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
     .name {
       margin-bottom: 0px;
     }
@@ -64,25 +81,13 @@ html {
       color: rgba(255,255,255, 0.7);
     }
   }
-
+  
   .tab-content{
     font-size: 1em;
     padding: 1.5em;
 
     *:first-child {
       margin-top: 0px;
-    }
-  }
-
-  .profile {
-    padding: 20px 0px;
-
-    .ms-Persona > .ms-Persona-details > .ms-Persona-primaryText, .ms-Persona-primaryText:hover {
-      color: #ffffff;
-    }
-
-    .ms-Persona-secondaryText{
-      color: rgba(255, 255, 255, 0.7);
     }
   }
 
@@ -104,9 +109,7 @@ html {
       }
     }
 
-    .period{
-      // float: right;
-      // line-height: 2em;
+    .period {
       font-size: 0.8em;
       color: $muted;
     }
@@ -121,5 +124,12 @@ html {
     width: 100%;
     margin: auto;
     padding: 0px 20px;
+  }
+
+  .profile {
+    .summary {
+      font-weight: 100;
+      text-justify: distribute;
+    }
   }
 }

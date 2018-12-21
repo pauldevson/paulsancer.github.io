@@ -57,7 +57,7 @@ export const jobs = [
       </ul>
     </>,
     achievements: [
-      "Built network infrastrucutre for home-hosted web applications accessible from intranet and internet."
+      "Built network infrastrucutre for home-network-hosted web applications accessible from Intranet and Internet."
     ]
   }
 ]
